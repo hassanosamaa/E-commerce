@@ -1723,408 +1723,485 @@ header {
 
     }
 
+}
 
-    #sec12 {
+#sec12 {
 
-        .crumb {
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
-            padding-top: 24px;
+    .crumb {
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        padding-top: 24px;
 
-            .breadcrumb {
-                gap: 12px;
-                margin-bottom: 24px;
-
-                .breadcrumb-item {
-                    a {
-
-                        text-decoration: none;
-                        @include textProperties($colorText: rgba(0, 0, 0, 0.6),
-                            $family: $family_1 , $weight: 400, $size: $size_8 , $lineHeight: 21px);
-                    }
-
-                }
-
-                .breadcrumb-item.active {
-                    a {
-
-                        color: #000;
-                    }
-                }
-
-            }
-
-        }
-
-        padding-bottom: 80px;
-
-        .card-row {
-            --bs-gutter-x: 20px !important;
-        }
-
-        .title-card {
-            text-transform: uppercase;
+        .breadcrumb {
+            gap: 12px;
             margin-bottom: 24px;
-            @include textProperties($colorText: $color_2,
-                $family: $family_1 , $weight: 700, $size: $size_2, $lineHeight: 48px);
-        }
 
-        .your-card {
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            border-radius: 20px;
-            padding: 20px 24px;
-
-            .card-row {
-                row-gap: 24px;
-
-                .card {
-                    width: 100%;
-                    padding-bottom: 24px;
-                    border: none;
-                    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-                    @extend .flex-row;
-                    justify-content: space-between;
-                    align-items: stretch;
-
-                    // gap: 16px;
-                    .left-card {
-                        @extend .flex-row;
-                        gap: 16px;
-
-                        .image {
-                            width: 124px;
-                            height: 124px;
-                            border-radius: 8px;
-                            border: none;
-                            overflow: hidden;
-
-                            img {
-                                width: 100%;
-                                height: 100%;
-                            }
-                        }
-
-                        .des {
-                            h2 {
-                                margin-bottom: 2px;
-                                @include textProperties($colorText: $color_2,
-                                    $family: $family_1 , $weight: 700, $size: $size_7, $lineHeight: 27px);
-
-                            }
-
-                            h3 {
-                                margin-bottom: 4px;
-                                @include textProperties($colorText: $color_2,
-                                    $family: $family_1 , $weight: 400, $size: 14px, $lineHeight: 18px);
-
-                                span {
-                                    color: rgba(0, 0, 0, 0.6);
-                                }
-
-                            }
-
-                            h4 {
-                                margin-top: 11px;
-                                @include textProperties($colorText: $color_2,
-                                    $family: $family_1 , $weight: 700, $size: 24px, $lineHeight: 32px);
-
-                            }
-                        }
-                    }
-
-                    .right-card {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: space-between;
-                        align-items: end;
-
-
-                        .fa-trash-can {
-                            color: #FF3333;
-                            margin-top: 10px;
-                        }
-
-
-                        .increase-decrease {
-                            background-color: #F0F0F0;
-                            border: none;
-                            border-radius: 62px;
-                            width: 126px;
-                            padding: 12px 0px;
-                            @extend .flex-row;
-                            gap: 28px;
-
-                            button {
-                                border: none;
-                                background-color: transparent;
-
-
-                            }
-
-
-
-
-                        }
-                    }
-                }
-            }
-
-
-        }
-
-        .summary {
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            border-radius: 20px;
-            padding: 20px 24px 33px;
-
-            h2 {
-                margin-bottom: 24px;
-                @include textProperties($colorText: #000,
-                    $family: $family_1 , $weight: 700, $size: 24px, $lineHeight: 32px);
-            }
-
-            div {
-                @extend .flex-row;
-                margin-bottom: 20px;
-                justify-content: space-between;
-
-                span {
-
-                    @include textProperties($colorText: rgba(0, 0, 0, 0.6),
-                        $family: $family_1 , $weight: 400, $size: 20px, $lineHeight: 27px);
-                }
-
-                .number {
-                    @include textProperties($colorText: #000,
-                        $family: $family_1 , $weight: 700, $size: 20px, $lineHeight: 27px);
-                }
-
-            }
-
-            .free {
-                padding-bottom: 20px;
-                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            }
-
-            .total {
-                margin-bottom: 24px;
-
-                span {
-                    @include textProperties($colorText: #000000,
-                        $family: $family_1 , $weight: 400, $size: 20px, $lineHeight: 27px);
-                }
-
-                .number {
-                    @include textProperties($colorText: #000000,
-                        $family: $family_1 , $weight: 700, $size: 24px, $lineHeight: 32px);
-                }
-
-
-            }
-
-            .apply {
-                margin-bottom: 24px;
-                gap: 12px;
-
-                input {
-                    background-color: #F0F0F0;
-                    border-radius: 62px;
-                    padding: 12px 52px;
-                    border: none;
-
-                }
-
-                button {
-                    background-color: #000;
-                    border: none;
-                    border-radius: 62px;
-                    padding: 13px 38px;
-                    @include textProperties($colorText: #fff,
-                        $family: $family_1 , $weight: 500, $size: 16px, $lineHeight: 21px);
-
-
-
-                }
-
-            }
-
-            .checkout {
-                width: 100%;
-                background-color: #000;
-                border: none;
-                border-radius: 62px;
-                padding: 19px 0px;
-                @include textProperties($colorText: #FFFFFF,
-                    $family: $family_1 , $weight: 500, $size: 16px, $lineHeight: 21px);
-
-
-            }
-
-
-        }
-    }
-
-    footer {
-        padding: 50px 0 81px;
-        background-color: #F0F0F0;
-
-        .top-footer {
-            padding-bottom: 50px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-
-            ul {
-                @extend .reset-ul;
-                display: flex;
-                flex-direction: column;
-                align-items: start;
-                gap: 26px;
-
-                li {
+            .breadcrumb-item {
+                a {
 
                     text-decoration: none;
                     @include textProperties($colorText: rgba(0, 0, 0, 0.6),
-                        $family: $family_1 , $weight: 400, $size: $size_8, $lineHeight: 18px);
-
-                }
-
-                .first-item {
-
-
-                    letter-spacing: 3px;
-                    @include textProperties($colorText: $color_2,
-                        $family: $family_1 , $weight: 500, $size: $size_8, $lineHeight: 18px);
-
-
-
+                        $family: $family_1 , $weight: 400, $size: $size_8 , $lineHeight: 21px);
                 }
 
             }
 
-            .shop {
-                h2 {
-                    margin-bottom: 25px;
-                    @include textProperties($colorText: $color_2,
-                        $family: $family_1 , $weight: 700, $size: 33px, $lineHeight: 40px);
-                }
+            .breadcrumb-item.active {
+                a {
 
-                p {
-                    max-width: 248px;
-                    margin-right: auto;
-                    margin-bottom: 35px;
-                    @include textProperties($colorText: rgba(0, 0, 0, 0.6),
-                        $family: $family_1 , $weight: 400, $size: 14px, $lineHeight: 22px);
+                    color: #000;
                 }
+            }
 
-                .social {
+        }
+
+    }
+
+    padding-bottom: 80px;
+
+    .card-row {
+        --bs-gutter-x: 20px !important;
+    }
+
+    .title-card {
+        text-transform: uppercase;
+        margin-bottom: 24px;
+        @include textProperties($colorText: $color_2,
+            $family: $family_1 , $weight: 700, $size: $size_2, $lineHeight: 48px);
+    }
+
+    .your-card {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        padding: 20px 24px;
+
+        .card-row {
+            row-gap: 24px;
+
+            .card {
+                width: 100%;
+                padding-bottom: 24px;
+                border: none;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                @extend .flex-row;
+                justify-content: space-between;
+                align-items: stretch;
+
+                // gap: 16px;
+                .left-card {
                     @extend .flex-row;
-                    justify-content: start;
-                    gap: 12px;
+                    gap: 16px;
 
-                    a {
-                        @extend .flex-row;
-                        text-decoration: none;
-                        width: 28px;
-                        height: 28px;
-                        border: 1px solid rgba(0, 0, 0, 0.2);
-                        border-radius: 50%;
-                        background-color: #fff;
+                    .image {
+                        width: 124px;
+                        height: 124px;
+                        border-radius: 8px;
+                        border: none;
+                        overflow: hidden;
 
-                        i {
-                            color: #000000;
-                            font-size: 12px;
+                        img {
+                            width: 100%;
+                            height: 100%;
                         }
                     }
 
+                    .des {
+                        h2 {
+                            margin-bottom: 2px;
+                            @include textProperties($colorText: $color_2,
+                                $family: $family_1 , $weight: 700, $size: $size_7, $lineHeight: 27px);
+
+                        }
+
+                        h3 {
+                            margin-bottom: 4px;
+                            @include textProperties($colorText: $color_2,
+                                $family: $family_1 , $weight: 400, $size: 14px, $lineHeight: 18px);
+
+                            span {
+                                color: rgba(0, 0, 0, 0.6);
+                            }
+
+                        }
+
+                        h4 {
+                            margin-top: 11px;
+                            @include textProperties($colorText: $color_2,
+                                $family: $family_1 , $weight: 700, $size: 24px, $lineHeight: 32px);
+
+                        }
+                    }
+                }
+
+                .right-card {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: end;
+
+
+                    .fa-trash-can {
+                        color: #FF3333;
+                        margin-top: 10px;
+                    }
+
+
+                    .increase-decrease {
+                        background-color: #F0F0F0;
+                        border: none;
+                        border-radius: 62px;
+                        width: 126px;
+                        padding: 12px 0px;
+                        @extend .flex-row;
+                        gap: 28px;
+
+                        button {
+                            border: none;
+                            background-color: transparent;
+
+
+                        }
+
+
+
+
+                    }
                 }
             }
         }
 
-        .bottom-footer {
-            padding-top: 20px;
+
+    }
+
+    .summary {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        padding: 20px 24px 33px;
+
+        h2 {
+            margin-bottom: 24px;
+            @include textProperties($colorText: #000,
+                $family: $family_1 , $weight: 700, $size: 24px, $lineHeight: 32px);
+        }
+
+        div {
+            @extend .flex-row;
+            margin-bottom: 20px;
+            justify-content: space-between;
 
             span {
+
                 @include textProperties($colorText: rgba(0, 0, 0, 0.6),
-                    $family: $family_1 , $weight: 400, $size: 14px, $lineHeight: 18px);
+                    $family: $family_1 , $weight: 400, $size: 20px, $lineHeight: 27px);
             }
 
-            .visa {
-                display: flex;
-                justify-content: end;
+            .number {
+                @include textProperties($colorText: #000,
+                    $family: $family_1 , $weight: 700, $size: 20px, $lineHeight: 27px);
+            }
+
+        }
+
+        .free {
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .total {
+            margin-bottom: 24px;
+
+            span {
+                @include textProperties($colorText: #000000,
+                    $family: $family_1 , $weight: 400, $size: 20px, $lineHeight: 27px);
+            }
+
+            .number {
+                @include textProperties($colorText: #000000,
+                    $family: $family_1 , $weight: 700, $size: 24px, $lineHeight: 32px);
+            }
+
+
+        }
+
+        .apply {
+            margin-bottom: 24px;
+            gap: 12px;
+
+            input {
+                background-color: #F0F0F0;
+                border-radius: 62px;
+                padding: 12px 52px;
+                border: none;
+
+            }
+
+            button {
+                background-color: #000;
+                border: none;
+                border-radius: 62px;
+                padding: 13px 38px;
+                @include textProperties($colorText: #fff,
+                    $family: $family_1 , $weight: 500, $size: 16px, $lineHeight: 21px);
+
+
+
+            }
+
+        }
+
+        .checkout {
+            width: 100%;
+            background-color: #000;
+            border: none;
+            border-radius: 62px;
+            padding: 19px 0px;
+            @include textProperties($colorText: #FFFFFF,
+                $family: $family_1 , $weight: 500, $size: 16px, $lineHeight: 21px);
+
+
+        }
+
+
+    }
+}
+
+footer {
+    padding: 50px 0 81px;
+    background-color: #F0F0F0;
+
+    .top-footer {
+        padding-bottom: 50px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+        ul {
+            @extend .reset-ul;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 26px;
+
+            li {
+
+                text-decoration: none;
+                @include textProperties($colorText: rgba(0, 0, 0, 0.6),
+                    $family: $family_1 , $weight: 400, $size: $size_8, $lineHeight: 18px);
+
+            }
+
+            .first-item {
+
+
+                letter-spacing: 3px;
+                @include textProperties($colorText: $color_2,
+                    $family: $family_1 , $weight: 500, $size: $size_8, $lineHeight: 18px);
+
+
+
+            }
+
+        }
+
+        .shop {
+            h2 {
+                margin-bottom: 25px;
+                @include textProperties($colorText: $color_2,
+                    $family: $family_1 , $weight: 700, $size: 33px, $lineHeight: 40px);
+            }
+
+            p {
+                max-width: 248px;
+                margin-right: auto;
+                margin-bottom: 35px;
+                @include textProperties($colorText: rgba(0, 0, 0, 0.6),
+                    $family: $family_1 , $weight: 400, $size: 14px, $lineHeight: 22px);
+            }
+
+            .social {
+                @extend .flex-row;
+                justify-content: start;
+                gap: 12px;
+
+                a {
+                    @extend .flex-row;
+                    text-decoration: none;
+                    width: 28px;
+                    height: 28px;
+                    border: 1px solid rgba(0, 0, 0, 0.2);
+                    border-radius: 50%;
+                    background-color: #fff;
+
+                    i {
+                        color: #000000;
+                        font-size: 12px;
+                    }
+                }
 
             }
         }
     }
 
+    .bottom-footer {
+        padding-top: 20px;
 
-    // js classes
-    .hidden {
-        display: none;
+        span {
+            @include textProperties($colorText: rgba(0, 0, 0, 0.6),
+                $family: $family_1 , $weight: 400, $size: 14px, $lineHeight: 18px);
+        }
+
+        .visa {
+            display: flex;
+            justify-content: end;
+
+        }
+    }
+}
+
+
+// js classes
+.hidden {
+    display: none;
+}
+
+.active-nav-link {
+    font-weight: 600;
+    border-bottom: 1px solid #000;
+}
+
+.non-active-circle {
+    img {
+        opacity: 0;
+    }
+}
+
+.active-size {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+.non-active-color {
+    img {
+        opacity: 0;
+    }
+}
+
+
+
+.edit-stars .fa-regular {
+    color: #696969af;
+}
+
+.edit-stars .fa-solid {
+    color: #FFC633;
+}
+
+
+
+
+
+@media screen and (max-width: 500px) {
+    header .nav-item {
+        margin-bottom: 10px !important;
+        width: fit-content !important;
     }
 
-    .active-nav-link {
-        font-weight: 600;
-        border-bottom: 1px solid #000;
+    header .navbar-brand {
+        margin-right: 0 !important;
     }
 
-    .non-active-circle {
+    .navbar-container {
+        justify-content: start !important;
+        align-items: center !important;
+        gap: 16px !important;
+    }
+
+    .navbar-toggler-icon {
+        height: 100% !important;
+    }
+
+    .navbar-toggler {
+        padding: 0px !important;
+    }
+
+    .navbar .icons {
         img {
-            opacity: 0;
+            width: 24px;
+            height: 24px;
         }
     }
 
-    .active-size {
-        background-color: #000 !important;
-        color: #fff !important;
-    }
+    nav {
+        .search {
+            max-width: 577px !important;
 
-    .non-active-color {
-        img {
-            opacity: 0;
-        }
-    }
-
-
-
-    .edit-stars .fa-regular {
-        color: #696969af;
-    }
-
-    .edit-stars .fa-solid {
-        color: #FFC633;
-    }
-
-
-
-
-
-    @media screen and (max-width: 500px) {
-        header .nav-item {
-            margin-bottom: 10px !important;
-            width: fit-content !important;
-        }
-
-        header .navbar-brand {
-            margin-right: 0 !important;
-        }
-
-        .navbar-container {
-            justify-content: start !important;
-            align-items: center !important;
-            gap: 16px !important;
-        }
-
-        .navbar-toggler-icon {
-            height: 100% !important;
-        }
-
-        .navbar-toggler {
-            padding: 0px !important;
-        }
-
-        .navbar .icons {
-            img {
-                width: 24px;
-                height: 24px;
+            .form-control {
+                width: 100% !important;
             }
+        }
+    }
+
+
+
+    #sec1 .left-sec1 {
+        padding-top: 40px !important;
+    }
+
+    #sec1 .left-sec1 {
+        h2 {
+
+            max-width: 315px !important;
+            margin-bottom: 20px !important;
+            @include textProperties($colorText: $color_2,
+                $family: $family_1 , $weight: 700, $size: 36px, $lineHeight: 34px);
+        }
+
+        p {
+            font-size: 14px !important;
+            margin-bottom: 24px !important;
+        }
+
+        a {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px !important;
+
+        }
+    }
+
+}
+
+@media screen and (max-width: 995px) {
+    header .navbar-brand {
+        margin-right: 0 !important;
+    }
+
+    header .nav-item {
+        margin-bottom: 10px !important;
+        width: fit-content !important;
+    }
+
+    .navbar-container {
+        justify-content: start !important;
+        align-items: center !important;
+        gap: 16px !important;
+    }
+
+    .navbar-toggler-icon {
+        height: 100% !important;
+    }
+
+    .navbar-toggler {
+        padding: 0px !important;
+    }
+
+    .navbar .icons {
+        img {
+            width: 24px;
+            height: 24px;
+
+        }
+
+        button {
+            background-color: transparent;
+
         }
 
         nav {
@@ -2136,81 +2213,5 @@ header {
                 }
             }
         }
-
-
-
-        #sec1 .left-sec1 {
-            padding-top: 40px !important;
-        }
-
-        #sec1 .left-sec1 {
-            h2 {
-
-                max-width: 315px !important;
-                margin-bottom: 20px !important;
-                @include textProperties($colorText: $color_2,
-                    $family: $family_1 , $weight: 700, $size: 36px, $lineHeight: 34px);
-            }
-
-            p {
-                font-size: 14px !important;
-                margin-bottom: 24px !important;
-            }
-
-            a {
-                width: 100%;
-                text-align: center;
-                margin-bottom: 20px !important;
-
-            }
-        }
-
     }
-
-    @media screen and (max-width: 995px) {
-        header .navbar-brand {
-            margin-right: 0 !important;
-        }
-
-        header .nav-item {
-            margin-bottom: 10px !important;
-            width: fit-content !important;
-        }
-
-        .navbar-container {
-            justify-content: start !important;
-            align-items: center !important;
-            gap: 16px !important;
-        }
-
-        .navbar-toggler-icon {
-            height: 100% !important;
-        }
-
-        .navbar-toggler {
-            padding: 0px !important;
-        }
-
-        .navbar .icons {
-            img {
-                width: 24px;
-                height: 24px;
-
-            }
-
-            button {
-                background-color: transparent;
-
-            }
-
-            nav {
-                .search {
-                    max-width: 577px !important;
-
-                    .form-control {
-                        width: 100% !important;
-                    }
-                }
-            }
-        }
-    }
+}

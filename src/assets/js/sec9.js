@@ -6,6 +6,7 @@ export const sec9 = () => {
 
     const starsNum = document.querySelectorAll('.numStarss');
     const stars = document.querySelectorAll('.card9 .stars');
+    const starsEdit=document.querySelectorAll('.edit-stars i');
 
 
     const btnRev1 = document.querySelector('.btn-rev1');
@@ -17,16 +18,26 @@ export const sec9 = () => {
 
     const des = document.querySelector('.des-text');
     const title = document.querySelector('.title-text');
+   
     const des2 = document.querySelector('.des-text2');
     const title2 = document.querySelector('.title-text2');
+    
     const des3 = document.querySelector('.des-text3');
     const title3 = document.querySelector('.title-text3');
+   
 
    
 
 
     if (btnRev1 !== null) {
 
+
+        starsEdit.forEach((ele)=>{
+            ele.addEventListener('click',()=>{
+                ele.classList.toggle('fa-solid');
+                ele.classList.toggle('fa-regular');
+            })
+        })
 
 
         starsNum.forEach((ele, index) => {
@@ -49,6 +60,8 @@ export const sec9 = () => {
 
         btnRev1.addEventListener('click', () => {
 
+           
+
 
             secRev1.innerHTML += `
 
@@ -56,10 +69,13 @@ export const sec9 = () => {
                 <div class="card9  text-start">
                     <div class="pointstars d-flex justify-content-between align-items-center">
                         <div class="stars">
+
+                           <img src="assets/images/sec3/Star.svg" alt="star">
                             <img src="assets/images/sec3/Star.svg" alt="star">
                             <img src="assets/images/sec3/Star.svg" alt="star">
                             <img src="assets/images/sec3/Star.svg" alt="star">
-                            <img src="assets/images/sec3/halfStar.svg" alt="star">
+                            <img src="assets/images/sec3/Star.svg" alt="star">
+            
                         </div>
                     <img src="../../assets/images/sec9/points.svg" alt="">
                 </div>
@@ -77,22 +93,27 @@ export const sec9 = () => {
             `
             des.value = '';
             title.value = '';
+           
 
         })
 
         btnRev2.addEventListener('click', () => {
 
-
+          
             secRev2.innerHTML += `
 
             <div class="col-6">
                 <div class="card9  text-start">
                     <div class="pointstars d-flex justify-content-between align-items-center">
-                        <div class="stars">
+                         <div class="stars">
+
+                           
+                          <img src="assets/images/sec3/Star.svg" alt="star">
                             <img src="assets/images/sec3/Star.svg" alt="star">
                             <img src="assets/images/sec3/Star.svg" alt="star">
                             <img src="assets/images/sec3/Star.svg" alt="star">
-                            <img src="assets/images/sec3/halfStar.svg" alt="star">
+                            <img src="assets/images/sec3/Star.svg" alt="star">
+            
                         </div>
                     <img src="../../assets/images/sec9/points.svg" alt="">
                 </div>
@@ -110,24 +131,29 @@ export const sec9 = () => {
             `
             des2.value = '';
             title2.value = '';
+           
 
         })
 
 
 
         btnRev3.addEventListener('click', () => {
-
+           
 
             secRev3.innerHTML += `
 
             <div class="col-6">
                 <div class="card9  text-start">
                     <div class="pointstars d-flex justify-content-between align-items-center">
-                        <div class="stars">
+                         <div class="stars">
+
+                           <img src="assets/images/sec3/Star.svg" alt="star">
                             <img src="assets/images/sec3/Star.svg" alt="star">
                             <img src="assets/images/sec3/Star.svg" alt="star">
                             <img src="assets/images/sec3/Star.svg" alt="star">
-                            <img src="assets/images/sec3/halfStar.svg" alt="star">
+                            <img src="assets/images/sec3/Star.svg" alt="star">
+                           
+            
                         </div>
                     <img src="../../assets/images/sec9/points.svg" alt="">
                 </div>
@@ -145,6 +171,7 @@ export const sec9 = () => {
             `
             des3.value = '';
             title3.value = '';
+           
 
         })
 

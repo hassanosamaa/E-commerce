@@ -6,6 +6,9 @@ export const nav = () => {
   const signTaq=document.querySelector(".sign");
   const userBtn=document.querySelector("#user");
   const navLinkBtn=document.querySelectorAll(".nav-link");
+  const seIcon=document.querySelector("#se");
+  const navbarToggler=document.querySelector(".navbar-toggler");
+  const navbarCollapse=document.querySelector(".navbar-collapse");
 
   closeBtn.addEventListener('click',()=>{
     signTaq.classList.add('hidden')
@@ -23,6 +26,9 @@ export const nav = () => {
     })
   })
 
+  seIcon.addEventListener('click',()=>{
+    navbarCollapse.classList.toggle("show");
+  })
 
 
 

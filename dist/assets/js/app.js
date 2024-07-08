@@ -19319,6 +19319,7 @@
 	const sec9 = () => {
 	  const starsNum = document.querySelectorAll('.numStarss');
 	  const stars = document.querySelectorAll('.card9 .stars');
+	  const starsEdit = document.querySelectorAll('.edit-stars i');
 	  const btnRev1 = document.querySelector('.btn-rev1');
 	  const secRev1 = document.querySelector('.sec-rev1');
 	  const btnRev2 = document.querySelector('.btn-rev2');
@@ -19333,6 +19334,12 @@
 	  const title3 = document.querySelector('.title-text3');
 
 	  if (btnRev1 !== null) {
+	    starsEdit.forEach(ele => {
+	      ele.addEventListener('click', () => {
+	        ele.classList.toggle('fa-solid');
+	        ele.classList.toggle('fa-regular');
+	      });
+	    });
 	    starsNum.forEach((ele, index) => {
 	      let img = '';
 
@@ -19353,10 +19360,13 @@
                 <div class="card9  text-start">
                     <div class="pointstars d-flex justify-content-between align-items-center">
                         <div class="stars">
+
+                           <img src="assets/images/sec3/Star.svg" alt="star">
                             <img src="assets/images/sec3/Star.svg" alt="star">
                             <img src="assets/images/sec3/Star.svg" alt="star">
                             <img src="assets/images/sec3/Star.svg" alt="star">
-                            <img src="assets/images/sec3/halfStar.svg" alt="star">
+                            <img src="assets/images/sec3/Star.svg" alt="star">
+            
                         </div>
                     <img src="../../assets/images/sec9/points.svg" alt="">
                 </div>
@@ -19381,11 +19391,15 @@
             <div class="col-6">
                 <div class="card9  text-start">
                     <div class="pointstars d-flex justify-content-between align-items-center">
-                        <div class="stars">
+                         <div class="stars">
+
+                           
+                          <img src="assets/images/sec3/Star.svg" alt="star">
                             <img src="assets/images/sec3/Star.svg" alt="star">
                             <img src="assets/images/sec3/Star.svg" alt="star">
                             <img src="assets/images/sec3/Star.svg" alt="star">
-                            <img src="assets/images/sec3/halfStar.svg" alt="star">
+                            <img src="assets/images/sec3/Star.svg" alt="star">
+            
                         </div>
                     <img src="../../assets/images/sec9/points.svg" alt="">
                 </div>
@@ -19410,11 +19424,15 @@
             <div class="col-6">
                 <div class="card9  text-start">
                     <div class="pointstars d-flex justify-content-between align-items-center">
-                        <div class="stars">
+                         <div class="stars">
+
+                           <img src="assets/images/sec3/Star.svg" alt="star">
                             <img src="assets/images/sec3/Star.svg" alt="star">
                             <img src="assets/images/sec3/Star.svg" alt="star">
                             <img src="assets/images/sec3/Star.svg" alt="star">
-                            <img src="assets/images/sec3/halfStar.svg" alt="star">
+                            <img src="assets/images/sec3/Star.svg" alt="star">
+                           
+            
                         </div>
                     <img src="../../assets/images/sec9/points.svg" alt="">
                 </div>
@@ -19439,22 +19457,55 @@
 	const sec11 = () => {
 	  const circleEle = document.querySelectorAll(".colors-circle span");
 	  const btnsSize = document.querySelectorAll(".btns-size span");
-	  circleEle.forEach(ele => {
-	    ele.addEventListener('click', () => {
-	      circleEle.forEach(ele => {
-	        ele.classList.add('non-active-color');
+	  const iconFilter = document.querySelector(".filter-icon");
+	  const asideEle = document.querySelector("#aside");
+	  const aside = document.querySelector("aside");
+	  const rightsec11 = document.querySelector(".rightsec11");
+	  const cardss = document.querySelectorAll(".cardss");
+	  const filterIcon2 = document.querySelector(".filter-icon2");
+
+	  if (iconFilter != null) {
+	    iconFilter.addEventListener('click', () => {
+	      aside.classList.toggle("d-none");
+	      asideEle.classList.toggle("col-3");
+	      asideEle.classList.toggle("col-1");
+	      rightsec11.classList.toggle("col-9");
+	      rightsec11.classList.toggle("col-12");
+	      cardss.forEach(ele => {
+	        ele.classList.toggle("col-4");
+	        ele.classList.toggle("col-3");
 	      });
-	      ele.classList.remove('non-active-color');
+	      filterIcon2.classList.toggle("d-none");
 	    });
-	  });
-	  btnsSize.forEach(ele => {
-	    ele.addEventListener('click', () => {
-	      btnsSize.forEach(ele => {
-	        ele.classList.remove('active-size');
+	    filterIcon2.addEventListener('click', () => {
+	      aside.classList.toggle("d-none");
+	      asideEle.classList.toggle("col-3");
+	      asideEle.classList.toggle("col-1");
+	      rightsec11.classList.toggle("col-9");
+	      rightsec11.classList.toggle("col-12");
+	      cardss.forEach(ele => {
+	        ele.classList.toggle("col-4");
+	        ele.classList.toggle("col-3");
 	      });
-	      ele.classList.add('active-size');
+	      filterIcon2.classList.toggle("d-none");
 	    });
-	  });
+	    circleEle.forEach(ele => {
+	      ele.addEventListener('click', () => {
+	        circleEle.forEach(ele => {
+	          ele.classList.add('non-active-color');
+	        });
+	        ele.classList.remove('non-active-color');
+	      });
+	    });
+	    btnsSize.forEach(ele => {
+	      ele.addEventListener('click', () => {
+	        btnsSize.forEach(ele => {
+	          ele.classList.remove('active-size');
+	        });
+	        ele.classList.add('active-size');
+	      });
+	    });
+	  }
 	};
 
 	const nav = () => {
@@ -19462,6 +19513,9 @@
 	  const signTaq = document.querySelector(".sign");
 	  const userBtn = document.querySelector("#user");
 	  const navLinkBtn = document.querySelectorAll(".nav-link");
+	  const seIcon = document.querySelector("#se");
+	  const navbarToggler = document.querySelector(".navbar-toggler");
+	  const navbarCollapse = document.querySelector(".navbar-collapse");
 	  closeBtn.addEventListener('click', () => {
 	    signTaq.classList.add('hidden');
 	  });
@@ -19475,6 +19529,9 @@
 	      });
 	      e.target.classList.add("active-nav-link");
 	    });
+	  });
+	  seIcon.addEventListener('click', () => {
+	    navbarCollapse.classList.toggle("show");
 	  });
 	};
 

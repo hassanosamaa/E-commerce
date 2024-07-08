@@ -32,7 +32,7 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    user-select: none;
+    // user-select: none;
 }
 
 h1,
@@ -98,6 +98,7 @@ header {
                 span {
                     a {
                         text-decoration: none;
+                        border-bottom: 1px solid white;
                         @include textProperties($colorText: $color_3,
                             $family: $family_2 , $weight: 500, $size: 14px, $lineHeight: 18px);
                     }
@@ -937,15 +938,18 @@ header {
             textarea {
                 width: 100%;
                 outline: none;
-                border: 1px solid  #F0F0F0;
+                border: 1px solid #F0F0F0;
                 border-radius: 20px;
                 background-color: #f0f0f0;
                 padding: 12px 7px;
             }
-            .title-text,.title-text2,.title-text3{
+
+            .title-text,
+            .title-text2,
+            .title-text3 {
                 width: 100%;
                 outline: none;
-                border: 1px solid  #F0F0F0;
+                border: 1px solid #F0F0F0;
                 border-radius: 20px;
                 background-color: #f0f0f0;
                 padding: 12px 7px;
@@ -953,78 +957,97 @@ header {
 
             }
         }
-        .btn-close {
-            background-color: transparent !important;
-        }
 
-    }
-
-    .cards {
-        margin-bottom: 36px;
-        row-gap: 20px;
-        // column-gap: 20px;
-        --bs-gutter-x: 20px !important;
-
-        .card9 {
-            padding: 28px 32px;
-            border: 1px solid rgba(0, 0, 0, 0.1);
+        .stars-text,
+        .stars-text2,
+        .stars-text3 {
+            outline: none;
+            border: 1px solid #F0F0F0;
             border-radius: 20px;
-
-            .pointstars {
-                margin-bottom: 15px;
-
-                .stars {
-
-                    @extend .flex-row;
-                    width: fit-content;
-                    justify-content: start;
-                    gap: 6.3px;
-
-                }
-            }
-
-            .title {
-                @extend .flex-row;
-                justify-content: start;
-                gap: 6px;
-                margin-bottom: 12px;
-
-                h4 {
-                    @include textProperties($colorText: $color_2,
-                        $family: $family_1 , $weight: 700, $size: $size_7 , $lineHeight: 22px);
-                }
-            }
-
-            p {
-                margin-bottom: 24px;
-                @include textProperties($colorText: rgba(0, 0, 0, 0.6),
-                    $family: $family_1 , $weight: 400, $size: $size_8 , $lineHeight: 22px);
-            }
-
-            h5 {
-                @include textProperties($colorText: rgba(0, 0, 0, 0.6),
-                    $family: $family_1 , $weight: 500, $size: $size_8 , $lineHeight: 22px);
-            }
-
+            background-color: #f0f0f0;
+            padding: 12px 7px;
+            margin-bottom: 15px;
         }
     }
 
-    .load {
-        width: 230px;
-        margin: auto;
-        text-decoration: none;
-        @extend .flex-row;
+    .btn-close {
+        background-color: transparent !important;
+    }
+
+}
+
+.cards {
+    margin-bottom: 36px;
+    row-gap: 20px;
+    // column-gap: 20px;
+    --bs-gutter-x: 20px !important;
+
+    .card9 {
+        padding: 28px 32px;
         border: 1px solid rgba(0, 0, 0, 0.1);
-        border-radius: 62px;
-        padding: 15px 0px;
-        @include textProperties($colorText: $color_2,
-            $family: $family_1 , $weight: 500, $size: 16px, $lineHeight: 21px);
+        border-radius: 20px;
+
+        .pointstars {
+            margin-bottom: 15px;
+
+            .stars {
+
+                @extend .flex-row;
+                width: fit-content;
+                justify-content: start;
+                gap: 6.3px;
+
+            }
+        }
+
+        .title {
+            @extend .flex-row;
+            justify-content: start;
+            gap: 6px;
+            margin-bottom: 12px;
+
+            h4 {
+                @include textProperties($colorText: $color_2,
+                    $family: $family_1 , $weight: 700, $size: $size_7 , $lineHeight: 22px);
+            }
+        }
+
+        p {
+            margin-bottom: 24px;
+            @include textProperties($colorText: rgba(0, 0, 0, 0.6),
+                $family: $family_1 , $weight: 400, $size: $size_8 , $lineHeight: 22px);
+        }
+
+        h5 {
+            @include textProperties($colorText: rgba(0, 0, 0, 0.6),
+                $family: $family_1 , $weight: 500, $size: $size_8 , $lineHeight: 22px);
+        }
 
     }
 }
 
+.load {
+    width: 230px;
+    margin: auto;
+    text-decoration: none;
+    @extend .flex-row;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 62px;
+    padding: 15px 0px;
+    @include textProperties($colorText: $color_2,
+        $family: $family_1 , $weight: 500, $size: 16px, $lineHeight: 21px);
+
+
+}
+
 #sec11 {
     padding-bottom: 80px;
+
+
+
+    .filter-icon2 {
+        cursor: pointer;
+    }
 
     .sec11-row {
 
@@ -1099,6 +1122,7 @@ header {
             width: fit-content;
             justify-content: start;
             gap: 5.3px;
+
             .numStars {
                 margin-left: 7px;
                 @include textProperties($colorText: #000,
@@ -1183,7 +1207,8 @@ header {
             $family: $family_1 , $weight: 400, $size: $size_8 , $lineHeight: 21px);
 
     }
-    .accor-description{
+
+    .accor-description {
         margin-bottom: 20px;
         @include textProperties($colorText: rgba(0, 0, 0, 0.6),
             $family: $family_1 , $weight: 400, $size: $size_8 , $lineHeight: 21px);
@@ -1201,610 +1226,496 @@ header {
     }
 
 
-    aside {
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        border-radius: 20px;
-        padding: 20px 24px 29px;
 
-        .filter {
-            margin-bottom: 24px;
-            padding-bottom: 24px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            @extend .flex-row;
-            justify-content: space-between;
+    .non-padding {
+        padding: 20px 0;
 
-            h3 {
-                @include textProperties($colorText: #000,
-                    $family: $family_1 , $weight: 700, $size: $size_7 , $lineHeight: 27px);
-            }
+        aside {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            padding: 20px 24px 29px;
 
-            img {
-                color: rgba(0, 0, 0, 0.4);
-            }
-        }
-
-        .accord-filter {
-            margin-bottom: 24px;
-            padding-bottom: 24px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-
-
-
-        }
-
-        .price {
-            margin-bottom: 24px;
-            padding-bottom: 24px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-
-            .accordion-button {
-                @include textProperties($colorText: $color_2,
-                    $family: $family_1 , $weight: 700, $size: $size_7 , $lineHeight: 27px);
-
-            }
-
-
-            [slider] {
-                position: relative;
-                height: 14px;
-                border-radius: 10px;
-                text-align: left;
-            }
-
-            [slider]>div {
-                position: absolute;
-                left: 0px;
-                right: 0px;
-                height: 6px;
-            }
-
-            [slider]>div>[inverse-left] {
-                position: absolute;
-                left: 0;
-                height: 6px;
-                border-radius: 20px;
-                background-color: #F0F0F0;
-
-            }
-
-            [slider]>div>[inverse-right] {
-                position: absolute;
-                right: 0;
-                height: 6px;
-                border-radius: 20px;
-                background-color: #F0F0F0;
-
-            }
-
-            [slider]>div>[range] {
-                position: absolute;
-                left: 0;
-                height: 6px;
-                border-radius: 20px;
-                background-color: #000000;
-            }
-
-            [slider]>div>[thumb] {
-                position: absolute;
-                top: -7px;
-                z-index: 2;
-                height: 20px;
-                width: 20px;
-                text-align: left;
-                margin-left: -11px;
-                cursor: pointer;
-                background-color: #000;
-                border-radius: 50%;
-                outline: none;
-            }
-
-            [slider]>input[type=range] {
-                position: absolute;
-                pointer-events: none;
-                -webkit-appearance: none;
-                z-index: 3;
-                height: 14px;
-                top: -2px;
-                width: 100%;
-                -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-                filter: alpha(opacity=0);
-                -moz-opacity: 0;
-                -khtml-opacity: 0;
-                opacity: 0;
-            }
-
-            div[slider]>input[type=range]::-ms-track {
-                -webkit-appearance: none;
-                background: transparent;
-                color: transparent;
-            }
-
-            div[slider]>input[type=range]::-moz-range-track {
-                -moz-appearance: none;
-                background: transparent;
-                color: transparent;
-            }
-
-            div[slider]>input[type=range]:focus::-webkit-slider-runnable-track {
-                background: transparent;
-                border: transparent;
-            }
-
-            div[slider]>input[type=range]:focus {
-                outline: none;
-            }
-
-            div[slider]>input[type=range]::-ms-thumb {
-                pointer-events: all;
-                width: 28px;
-                height: 28px;
-                border-radius: 0px;
-                border: 0 none;
-                background: red;
-            }
-
-            div[slider]>input[type=range]::-moz-range-thumb {
-                pointer-events: all;
-                width: 28px;
-                height: 28px;
-                border-radius: 0px;
-                border: 0 none;
-                background: red;
-            }
-
-            div[slider]>input[type=range]::-webkit-slider-thumb {
-                pointer-events: all;
-                width: 28px;
-                height: 28px;
-                border-radius: 0px;
-                border: 0 none;
-                background: red;
-                -webkit-appearance: none;
-            }
-
-            div[slider]>input[type=range]::-ms-fill-lower {
-                background: transparent;
-                border: 0 none;
-            }
-
-            div[slider]>input[type=range]::-ms-fill-upper {
-                background: transparent;
-                border: 0 none;
-            }
-
-            div[slider]>input[type=range]::-ms-tooltip {
-                display: none;
-            }
-
-            [slider]>div>[sign] {
-
-                position: absolute;
-                margin-left: -11px;
-                bottom: -27px;
-                z-index: 3;
-
-                @include textProperties($colorText: #000,
-                    $family: $family_1 , $weight: 500, $size: 14px, $lineHeight: 18px);
-
-
-
-                -webkit-border-radius: 28px;
-                align-items: center;
-                -webkit-justify-content: center;
-                justify-content: center;
-                text-align: center;
-            }
-
-            [slider]>div>[sign]:before {
-                position: absolute;
-                content: '$';
-                left: -8px;
-
-
-
-
-
-            }
-
-
-
-
-
-
-        }
-
-        .Colors {
-            margin-bottom: 24px;
-            padding-bottom: 24px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-
-            .accordion-button {
-                @include textProperties($colorText: $color_2,
-                    $family: $family_1 , $weight: 700, $size: $size_7 , $lineHeight: 27px);
-
-            }
-
-            .colors-circle {
-                cursor: pointer;
-                @extend .flex-row;
-                justify-content: start;
-                flex-wrap: wrap;
-                gap: 16px;
-
-                span {
-                    @extend .flex-row;
-                    width: 37px;
-                    height: 37px;
-                    border: 1px solid rgba(0, 0, 0, 0.2);
-                    border-radius: 50%;
-                }
-            }
-
-        }
-
-        .Size {
-            margin-bottom: 24px;
-            padding-bottom: 24px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-
-            .accordion-button {
-                @include textProperties($colorText: $color_2,
-                    $family: $family_1 , $weight: 700, $size: $size_7 , $lineHeight: 27px);
-
-            }
-
-            .btns {
-                cursor: pointer;
-                @extend .flex-row;
-                flex-wrap: wrap;
-                justify-content: start;
-                gap: 8px;
-
-                span {
-                    background-color: #F0F0F0;
-                    border-radius: 62px;
-                    border: none;
-                    padding: 10px 20px;
-                    @include textProperties($colorText: rgba(0, 0, 0, 0.6),
-                        $family: $family_1 , $weight: 400, $size: 14px, $lineHeight: 18px);
-
-                }
-            }
-
-        }
-
-        .Dress {
-            margin-bottom: 24px;
-
-            .accordion-button {
-                @include textProperties($colorText: $color_2,
-                    $family: $family_1 , $weight: 700, $size: $size_7 , $lineHeight: 27px);
-
-            }
-
-            .accord-dress {
-                .accordion-button {
-                    @include textProperties($colorText: rgba(0, 0, 0, 0.6),
-                        $family: $family_1 , $weight: 400, $size: $size_8 , $lineHeight: 21px);
-
-                }
-            }
-        }
-
-        .sec11 {
-            --bs-gutter-x: 20px !important;
-        }
-
-        .title {
-            margin-bottom: 16px;
-            @include textProperties($colorText: #000,
-                $family: $family_1 , $weight: 700, $size: 32px, $lineHeight: 43px);
-
-        }
-
-
-        .apply {
-            width: 100%;
-            padding: 14px 0px;
-            background-color: #000;
-            border: none;
-            border-radius: 62px;
-            @include textProperties($colorText: $color_1,
-                $family: $family_1 , $weight: 500, $size: 14px, $lineHeight: 18px);
-
-        }
-
-        .accordion-button::after{
-            transform: rotate(270deg);
-
-        }
-        .accordion-button:not(.collapsed)::after {
-
-            transform: rotate(360deg) !important;
-            background-image: url('../../assets/images/sec11/arrow.png') !important;
-        }
-
-
-    }
-
-
-
-    .products {
-        row-gap: 36px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        padding-bottom: 32px;
-        margin-bottom: 20px;
-
-
-
-        a {
-            text-decoration: none;
-
-            .card {
-                border: none;
-
-
-                .card-img {
-
-                    width: 295px;
-                    // width:100%;
-                    height: 298px;
-                    background-color: $color_4;
-                    border: none;
-                    border-radius: 20px;
-                    margin-bottom: 16px;
-                    overflow: hidden;
-
-                    img {
-
-                        width: 100%;
-                        height: 100%;
-                    }
-
-                }
-
-                h3 {
-                    margin-bottom: 8px;
-                    @include textProperties($colorText: $color_2,
-                        $family: $family_1 , $weight: 700, $size: $size_7 , $lineHeight: 27px);
-                }
-
-                .stars {
-                    margin-bottom: 10px;
-                    @extend .flex-row;
-                    width: fit-content;
-                    justify-content: start;
-                    gap: 5.3px;
-
-                }
-
-                span {
-                    @include textProperties($colorText: $color_2,
-                        $family: $family_1 , $weight: 700, $size: 24px, $lineHeight: 32.4px);
-                }
-
-
-            }
-        }
-    }
-
-    .casual {
-        width: 100%;
-        @extend .flex-row;
-        justify-content: space-between;
-        margin-bottom: 16px;
-
-        h2 {
-            @include textProperties($colorText: #000,
-                $family: $family_1 , $weight: 700, $size: 32px, $lineHeight: 43px);
-        }
-
-        .popular {
-            @extend .flex-row;
-            gap: 12px;
-
-            .show {
-                @include textProperties($colorText: rgba(0, 0, 0, 0.6),
-                    $family: $family_1 , $weight: 400, $size: 16px, $lineHeight: 21px);
-            }
-
-            .sort {
-                @include textProperties($colorText: rgba(0, 0, 0, 0.6),
-                    $family: $family_1 , $weight: 400, $size: 16px, $lineHeight: 21px);
-
-                #cars {
-                    background-color: transparent;
-                    border: none;
-                    padding-right: 4px;
-                    @include textProperties($colorText: $color_2,
-                        $family: $family_1 , $weight: 500, $size: 16px, $lineHeight: 21px);
-
-                }
-            }
-        }
-    }
-
-    .pagination-page {
-        .pagination {
-            margin: 0px;
-            width: 100%;
-            justify-content: space-between;
-
-            .page-link {
-                border: 1px solid rgba(0, 0, 0, 0.1);
-                padding: 8px 14px;
-                @include textProperties($colorText: #000,
-                    $family: $family_1 , $weight: 500, $size: 14px, $lineHeight: 20px);
-
-                .prev {
-                    margin-right: 8px;
-                }
-
-                .next {
-                    margin-left: 8px;
-                }
-
-            }
-
-            .items {
-                @extend .reset-ul;
-                @extend .flex-row;
-
-                .page-link {
-                    border: none;
-                    @include textProperties($colorText: rgba(0, 0, 0, 0.5),
-                        $family: $family_1 , $weight: 500, $size: 14px, $lineHeight: 20px);
-
-                }
-
-            }
-        }
-    }
-
-
-}
-
-
-#sec12 {
-
-    .crumb {
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
-        padding-top: 24px;
-
-        .breadcrumb {
-            gap: 12px;
-            margin-bottom: 24px;
-
-            .breadcrumb-item {
-                a {
-
-                    text-decoration: none;
-                    @include textProperties($colorText: rgba(0, 0, 0, 0.6),
-                        $family: $family_1 , $weight: 400, $size: $size_8 , $lineHeight: 21px);
-                }
-
-            }
-
-            .breadcrumb-item.active {
-                a {
-
-                    color: #000;
-                }
-            }
-
-        }
-
-    }
-
-    padding-bottom: 80px;
-
-    .card-row {
-        --bs-gutter-x: 20px !important;
-    }
-
-    .title-card {
-        text-transform: uppercase;
-        margin-bottom: 24px;
-        @include textProperties($colorText: $color_2,
-            $family: $family_1 , $weight: 700, $size: $size_2, $lineHeight: 48px);
-    }
-
-    .your-card {
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        border-radius: 20px;
-        padding: 20px 24px;
-
-        .card-row {
-            row-gap: 24px;
-
-            .card {
-                width: 100%;
+            .filter {
+                margin-bottom: 24px;
                 padding-bottom: 24px;
-                border: none;
                 border-bottom: 1px solid rgba(0, 0, 0, 0.1);
                 @extend .flex-row;
                 justify-content: space-between;
-                align-items: stretch;
 
-                // gap: 16px;
-                .left-card {
+                h3 {
+                    @include textProperties($colorText: #000,
+                        $family: $family_1 , $weight: 700, $size: $size_7 , $lineHeight: 27px);
+                }
+
+                img {
+                    color: rgba(0, 0, 0, 0.4);
+                }
+            }
+
+            .accord-filter {
+                margin-bottom: 24px;
+                padding-bottom: 24px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+            }
+
+            .non-filter {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                border-bottom: none;
+                justify-content: center;
+
+
+            }
+
+            .price {
+                margin-bottom: 24px;
+                padding-bottom: 24px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+                .accordion-button {
+                    @include textProperties($colorText: $color_2,
+                        $family: $family_1 , $weight: 700, $size: $size_7 , $lineHeight: 27px);
+
+                }
+
+
+                [slider] {
+                    position: relative;
+                    height: 14px;
+                    border-radius: 10px;
+                    text-align: left;
+                }
+
+                [slider]>div {
+                    position: absolute;
+                    left: 0px;
+                    right: 0px;
+                    height: 6px;
+                }
+
+                [slider]>div>[inverse-left] {
+                    position: absolute;
+                    left: 0;
+                    height: 6px;
+                    border-radius: 20px;
+                    background-color: #F0F0F0;
+
+                }
+
+                [slider]>div>[inverse-right] {
+                    position: absolute;
+                    right: 0;
+                    height: 6px;
+                    border-radius: 20px;
+                    background-color: #F0F0F0;
+
+                }
+
+                [slider]>div>[range] {
+                    position: absolute;
+                    left: 0;
+                    height: 6px;
+                    border-radius: 20px;
+                    background-color: #000000;
+                }
+
+                [slider]>div>[thumb] {
+                    position: absolute;
+                    top: -7px;
+                    z-index: 2;
+                    height: 20px;
+                    width: 20px;
+                    text-align: left;
+                    margin-left: -11px;
+                    cursor: pointer;
+                    background-color: #000;
+                    border-radius: 50%;
+                    outline: none;
+                }
+
+                [slider]>input[type=range] {
+                    position: absolute;
+                    pointer-events: none;
+                    -webkit-appearance: none;
+                    z-index: 3;
+                    height: 14px;
+                    top: -2px;
+                    width: 100%;
+                    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+                    filter: alpha(opacity=0);
+                    -moz-opacity: 0;
+                    -khtml-opacity: 0;
+                    opacity: 0;
+                }
+
+                div[slider]>input[type=range]::-ms-track {
+                    -webkit-appearance: none;
+                    background: transparent;
+                    color: transparent;
+                }
+
+                div[slider]>input[type=range]::-moz-range-track {
+                    -moz-appearance: none;
+                    background: transparent;
+                    color: transparent;
+                }
+
+                div[slider]>input[type=range]:focus::-webkit-slider-runnable-track {
+                    background: transparent;
+                    border: transparent;
+                }
+
+                div[slider]>input[type=range]:focus {
+                    outline: none;
+                }
+
+                div[slider]>input[type=range]::-ms-thumb {
+                    pointer-events: all;
+                    width: 28px;
+                    height: 28px;
+                    border-radius: 0px;
+                    border: 0 none;
+                    background: red;
+                }
+
+                div[slider]>input[type=range]::-moz-range-thumb {
+                    pointer-events: all;
+                    width: 28px;
+                    height: 28px;
+                    border-radius: 0px;
+                    border: 0 none;
+                    background: red;
+                }
+
+                div[slider]>input[type=range]::-webkit-slider-thumb {
+                    pointer-events: all;
+                    width: 28px;
+                    height: 28px;
+                    border-radius: 0px;
+                    border: 0 none;
+                    background: red;
+                    -webkit-appearance: none;
+                }
+
+                div[slider]>input[type=range]::-ms-fill-lower {
+                    background: transparent;
+                    border: 0 none;
+                }
+
+                div[slider]>input[type=range]::-ms-fill-upper {
+                    background: transparent;
+                    border: 0 none;
+                }
+
+                div[slider]>input[type=range]::-ms-tooltip {
+                    display: none;
+                }
+
+                [slider]>div>[sign] {
+
+                    position: absolute;
+                    margin-left: -11px;
+                    bottom: -27px;
+                    z-index: 3;
+
+                    @include textProperties($colorText: #000,
+                        $family: $family_1 , $weight: 500, $size: 14px, $lineHeight: 18px);
+
+
+
+                    -webkit-border-radius: 28px;
+                    align-items: center;
+                    -webkit-justify-content: center;
+                    justify-content: center;
+                    text-align: center;
+                }
+
+                [slider]>div>[sign]:before {
+                    position: absolute;
+                    content: '$';
+                    left: -8px;
+
+
+
+
+
+                }
+
+
+
+
+
+
+            }
+
+            .Colors {
+                margin-bottom: 24px;
+                padding-bottom: 24px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+                .accordion-button {
+                    @include textProperties($colorText: $color_2,
+                        $family: $family_1 , $weight: 700, $size: $size_7 , $lineHeight: 27px);
+
+                }
+
+                .colors-circle {
+                    cursor: pointer;
                     @extend .flex-row;
+                    justify-content: start;
+                    flex-wrap: wrap;
                     gap: 16px;
 
-                    .image {
-                        width: 124px;
-                        height: 124px;
-                        border-radius: 8px;
-                        border: none;
-                        overflow: hidden;
+                    span {
+                        @extend .flex-row;
+                        width: 37px;
+                        height: 37px;
+                        border: 1px solid rgba(0, 0, 0, 0.2);
+                        border-radius: 50%;
 
-                        img {
-                            width: 100%;
-                            height: 100%;
-                        }
-                    }
+                        .color-true {
+                            position: relative;
 
-                    .des {
-                        h2 {
-                            margin-bottom: 2px;
-                            @include textProperties($colorText: $color_2,
-                                $family: $family_1 , $weight: 700, $size: $size_7, $lineHeight: 27px);
-
-                        }
-
-                        h3 {
-                            margin-bottom: 4px;
-                            @include textProperties($colorText: $color_2,
-                                $family: $family_1 , $weight: 400, $size: 14px, $lineHeight: 18px);
-
-                            span {
-                                color: rgba(0, 0, 0, 0.6);
+                            .radio {
+                                appearance: none;
+                                outline: none;
+                                width: 37px;
+                                height: 37px;
+                                border: 1px solid rgba(0, 0, 0, 0.2);
+                                border-radius: 50%;
                             }
 
+                            img {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -60%);
+                                opacity: 1;
+                            }
                         }
 
-                        h4 {
-                            margin-top: 11px;
-                            @include textProperties($colorText: $color_2,
-                                $family: $family_1 , $weight: 700, $size: 24px, $lineHeight: 32px);
-
-                        }
                     }
                 }
 
-                .right-card {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    align-items: end;
+            }
 
+            .Size {
+                margin-bottom: 24px;
+                padding-bottom: 24px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
-                    .fa-trash-can {
-                        color: #FF3333;
-                        margin-top: 10px;
-                    }
+                .accordion-button {
+                    @include textProperties($colorText: $color_2,
+                        $family: $family_1 , $weight: 700, $size: $size_7 , $lineHeight: 27px);
 
+                }
 
-                    .increase-decrease {
+                .btns {
+                    cursor: pointer;
+                    @extend .flex-row;
+                    flex-wrap: wrap;
+                    justify-content: start;
+                    gap: 8px;
+
+                    span {
                         background-color: #F0F0F0;
-                        border: none;
                         border-radius: 62px;
-                        width: 126px;
-                        padding: 12px 0px;
-                        @extend .flex-row;
-                        gap: 28px;
+                        border: none;
+                        padding: 10px 20px;
+                        @include textProperties($colorText: rgba(0, 0, 0, 0.6),
+                            $family: $family_1 , $weight: 400, $size: 14px, $lineHeight: 18px);
 
-                        button {
-                            border: none;
-                            background-color: transparent;
+                    }
+                }
+
+            }
+
+            .Dress {
+                margin-bottom: 24px;
+
+                .accordion-button {
+                    @include textProperties($colorText: $color_2,
+                        $family: $family_1 , $weight: 700, $size: $size_7 , $lineHeight: 27px);
+
+                }
+
+                .accord-dress {
+                    .accordion-button {
+                        @include textProperties($colorText: rgba(0, 0, 0, 0.6),
+                            $family: $family_1 , $weight: 400, $size: $size_8 , $lineHeight: 21px);
+
+                    }
+                }
+            }
+
+            .sec11 {
+                --bs-gutter-x: 20px !important;
+            }
+
+            .title {
+                margin-bottom: 16px;
+                @include textProperties($colorText: #000,
+                    $family: $family_1 , $weight: 700, $size: 32px, $lineHeight: 43px);
+
+            }
 
 
+            .apply {
+                width: 100%;
+                padding: 14px 0px;
+                background-color: #000;
+                border: none;
+                border-radius: 62px;
+                @include textProperties($colorText: $color_1,
+                    $family: $family_1 , $weight: 500, $size: 14px, $lineHeight: 18px);
+
+            }
+
+            .accordion-button::after {
+                transform: rotate(270deg);
+
+            }
+
+            .accordion-button:not(.collapsed)::after {
+
+                transform: rotate(360deg) !important;
+                background-image: url('../../assets/images/sec11/arrow.png') !important;
+            }
+
+
+        }
+
+
+
+        .products {
+            row-gap: 36px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            padding-bottom: 32px;
+            margin-bottom: 20px;
+
+
+
+            a {
+                text-decoration: none;
+
+                .card {
+                    border: none;
+
+
+                    .card-img {
+
+                        width: 295px;
+                        // width:100%;
+                        height: 298px;
+                        background-color: $color_4;
+                        border: none;
+                        border-radius: 20px;
+                        margin-bottom: 16px;
+                        overflow: hidden;
+
+                        img {
+
+                            width: 100%;
+                            height: 100%;
                         }
 
+                    }
 
+                    h3 {
+                        margin-bottom: 8px;
+                        @include textProperties($colorText: $color_2,
+                            $family: $family_1 , $weight: 700, $size: $size_7 , $lineHeight: 27px);
+                    }
 
+                    .stars {
+                        margin-bottom: 10px;
+                        @extend .flex-row;
+                        width: fit-content;
+                        justify-content: start;
+                        gap: 5.3px;
 
                     }
+
+                    span {
+                        @include textProperties($colorText: $color_2,
+                            $family: $family_1 , $weight: 700, $size: 24px, $lineHeight: 32.4px);
+                    }
+
+
+                }
+            }
+        }
+
+        .casual {
+            width: 100%;
+            @extend .flex-row;
+            justify-content: space-between;
+            margin-bottom: 16px;
+
+            h2 {
+                @include textProperties($colorText: #000,
+                    $family: $family_1 , $weight: 700, $size: 32px, $lineHeight: 43px);
+            }
+
+            .popular {
+                @extend .flex-row;
+                gap: 12px;
+
+                .show {
+                    @include textProperties($colorText: rgba(0, 0, 0, 0.6),
+                        $family: $family_1 , $weight: 400, $size: 16px, $lineHeight: 21px);
+                }
+
+                .sort {
+                    @include textProperties($colorText: rgba(0, 0, 0, 0.6),
+                        $family: $family_1 , $weight: 400, $size: 16px, $lineHeight: 21px);
+
+                    #cars {
+                        background-color: transparent;
+                        border: none;
+                        padding-right: 4px;
+                        @include textProperties($colorText: $color_2,
+                            $family: $family_1 , $weight: 500, $size: 16px, $lineHeight: 21px);
+
+                    }
+                }
+            }
+        }
+
+        .pagination-page {
+            .pagination {
+                margin: 0px;
+                width: 100%;
+                justify-content: space-between;
+
+                .page-link {
+                    border: 1px solid rgba(0, 0, 0, 0.1);
+                    padding: 8px 14px;
+                    @include textProperties($colorText: #000,
+                        $family: $family_1 , $weight: 500, $size: 14px, $lineHeight: 20px);
+
+                    .prev {
+                        margin-right: 8px;
+                    }
+
+                    .next {
+                        margin-left: 8px;
+                    }
+
+                }
+
+                .items {
+                    @extend .reset-ul;
+                    @extend .flex-row;
+
+                    .page-link {
+                        border: none;
+                        @include textProperties($colorText: rgba(0, 0, 0, 0.5),
+                            $family: $family_1 , $weight: 500, $size: 14px, $lineHeight: 20px);
+
+                    }
+
                 }
             }
         }
@@ -1812,221 +1723,494 @@ header {
 
     }
 
-    .summary {
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        border-radius: 20px;
-        padding: 20px 24px 33px;
 
-        h2 {
-            margin-bottom: 24px;
-            @include textProperties($colorText: #000,
-                $family: $family_1 , $weight: 700, $size: 24px, $lineHeight: 32px);
-        }
+    #sec12 {
 
-        div {
-            @extend .flex-row;
-            margin-bottom: 20px;
-            justify-content: space-between;
+        .crumb {
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            padding-top: 24px;
 
-            span {
+            .breadcrumb {
+                gap: 12px;
+                margin-bottom: 24px;
 
-                @include textProperties($colorText: rgba(0, 0, 0, 0.6),
-                    $family: $family_1 , $weight: 400, $size: 20px, $lineHeight: 27px);
+                .breadcrumb-item {
+                    a {
+
+                        text-decoration: none;
+                        @include textProperties($colorText: rgba(0, 0, 0, 0.6),
+                            $family: $family_1 , $weight: 400, $size: $size_8 , $lineHeight: 21px);
+                    }
+
+                }
+
+                .breadcrumb-item.active {
+                    a {
+
+                        color: #000;
+                    }
+                }
+
             }
 
-            .number {
+        }
+
+        padding-bottom: 80px;
+
+        .card-row {
+            --bs-gutter-x: 20px !important;
+        }
+
+        .title-card {
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            @include textProperties($colorText: $color_2,
+                $family: $family_1 , $weight: 700, $size: $size_2, $lineHeight: 48px);
+        }
+
+        .your-card {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            padding: 20px 24px;
+
+            .card-row {
+                row-gap: 24px;
+
+                .card {
+                    width: 100%;
+                    padding-bottom: 24px;
+                    border: none;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                    @extend .flex-row;
+                    justify-content: space-between;
+                    align-items: stretch;
+
+                    // gap: 16px;
+                    .left-card {
+                        @extend .flex-row;
+                        gap: 16px;
+
+                        .image {
+                            width: 124px;
+                            height: 124px;
+                            border-radius: 8px;
+                            border: none;
+                            overflow: hidden;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+
+                        .des {
+                            h2 {
+                                margin-bottom: 2px;
+                                @include textProperties($colorText: $color_2,
+                                    $family: $family_1 , $weight: 700, $size: $size_7, $lineHeight: 27px);
+
+                            }
+
+                            h3 {
+                                margin-bottom: 4px;
+                                @include textProperties($colorText: $color_2,
+                                    $family: $family_1 , $weight: 400, $size: 14px, $lineHeight: 18px);
+
+                                span {
+                                    color: rgba(0, 0, 0, 0.6);
+                                }
+
+                            }
+
+                            h4 {
+                                margin-top: 11px;
+                                @include textProperties($colorText: $color_2,
+                                    $family: $family_1 , $weight: 700, $size: 24px, $lineHeight: 32px);
+
+                            }
+                        }
+                    }
+
+                    .right-card {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: end;
+
+
+                        .fa-trash-can {
+                            color: #FF3333;
+                            margin-top: 10px;
+                        }
+
+
+                        .increase-decrease {
+                            background-color: #F0F0F0;
+                            border: none;
+                            border-radius: 62px;
+                            width: 126px;
+                            padding: 12px 0px;
+                            @extend .flex-row;
+                            gap: 28px;
+
+                            button {
+                                border: none;
+                                background-color: transparent;
+
+
+                            }
+
+
+
+
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+        .summary {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            padding: 20px 24px 33px;
+
+            h2 {
+                margin-bottom: 24px;
                 @include textProperties($colorText: #000,
-                    $family: $family_1 , $weight: 700, $size: 20px, $lineHeight: 27px);
-            }
-
-        }
-
-        .free {
-            padding-bottom: 20px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        }
-
-        .total {
-            margin-bottom: 24px;
-
-            span {
-                @include textProperties($colorText: #000000,
-                    $family: $family_1 , $weight: 400, $size: 20px, $lineHeight: 27px);
-            }
-
-            .number {
-                @include textProperties($colorText: #000000,
                     $family: $family_1 , $weight: 700, $size: 24px, $lineHeight: 32px);
             }
 
+            div {
+                @extend .flex-row;
+                margin-bottom: 20px;
+                justify-content: space-between;
+
+                span {
+
+                    @include textProperties($colorText: rgba(0, 0, 0, 0.6),
+                        $family: $family_1 , $weight: 400, $size: 20px, $lineHeight: 27px);
+                }
+
+                .number {
+                    @include textProperties($colorText: #000,
+                        $family: $family_1 , $weight: 700, $size: 20px, $lineHeight: 27px);
+                }
+
+            }
+
+            .free {
+                padding-bottom: 20px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            }
+
+            .total {
+                margin-bottom: 24px;
+
+                span {
+                    @include textProperties($colorText: #000000,
+                        $family: $family_1 , $weight: 400, $size: 20px, $lineHeight: 27px);
+                }
+
+                .number {
+                    @include textProperties($colorText: #000000,
+                        $family: $family_1 , $weight: 700, $size: 24px, $lineHeight: 32px);
+                }
+
+
+            }
+
+            .apply {
+                margin-bottom: 24px;
+                gap: 12px;
+
+                input {
+                    background-color: #F0F0F0;
+                    border-radius: 62px;
+                    padding: 12px 52px;
+                    border: none;
+
+                }
+
+                button {
+                    background-color: #000;
+                    border: none;
+                    border-radius: 62px;
+                    padding: 13px 38px;
+                    @include textProperties($colorText: #fff,
+                        $family: $family_1 , $weight: 500, $size: 16px, $lineHeight: 21px);
+
+
+
+                }
+
+            }
+
+            .checkout {
+                width: 100%;
+                background-color: #000;
+                border: none;
+                border-radius: 62px;
+                padding: 19px 0px;
+                @include textProperties($colorText: #FFFFFF,
+                    $family: $family_1 , $weight: 500, $size: 16px, $lineHeight: 21px);
+
+
+            }
+
 
         }
+    }
 
-        .apply {
-            margin-bottom: 24px;
-            gap: 12px;
+    footer {
+        padding: 50px 0 81px;
+        background-color: #F0F0F0;
 
-            input {
-                background-color: #F0F0F0;
-                border-radius: 62px;
-                padding: 12px 52px;
-                border: none;
+        .top-footer {
+            padding-bottom: 50px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+            ul {
+                @extend .reset-ul;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                gap: 26px;
+
+                li {
+
+                    text-decoration: none;
+                    @include textProperties($colorText: rgba(0, 0, 0, 0.6),
+                        $family: $family_1 , $weight: 400, $size: $size_8, $lineHeight: 18px);
+
+                }
+
+                .first-item {
+
+
+                    letter-spacing: 3px;
+                    @include textProperties($colorText: $color_2,
+                        $family: $family_1 , $weight: 500, $size: $size_8, $lineHeight: 18px);
+
+
+
+                }
+
+            }
+
+            .shop {
+                h2 {
+                    margin-bottom: 25px;
+                    @include textProperties($colorText: $color_2,
+                        $family: $family_1 , $weight: 700, $size: 33px, $lineHeight: 40px);
+                }
+
+                p {
+                    max-width: 248px;
+                    margin-right: auto;
+                    margin-bottom: 35px;
+                    @include textProperties($colorText: rgba(0, 0, 0, 0.6),
+                        $family: $family_1 , $weight: 400, $size: 14px, $lineHeight: 22px);
+                }
+
+                .social {
+                    @extend .flex-row;
+                    justify-content: start;
+                    gap: 12px;
+
+                    a {
+                        @extend .flex-row;
+                        text-decoration: none;
+                        width: 28px;
+                        height: 28px;
+                        border: 1px solid rgba(0, 0, 0, 0.2);
+                        border-radius: 50%;
+                        background-color: #fff;
+
+                        i {
+                            color: #000000;
+                            font-size: 12px;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .bottom-footer {
+            padding-top: 20px;
+
+            span {
+                @include textProperties($colorText: rgba(0, 0, 0, 0.6),
+                    $family: $family_1 , $weight: 400, $size: 14px, $lineHeight: 18px);
+            }
+
+            .visa {
+                display: flex;
+                justify-content: end;
+
+            }
+        }
+    }
+
+
+    // js classes
+    .hidden {
+        display: none;
+    }
+
+    .active-nav-link {
+        font-weight: 600;
+        border-bottom: 1px solid #000;
+    }
+
+    .non-active-circle {
+        img {
+            opacity: 0;
+        }
+    }
+
+    .active-size {
+        background-color: #000 !important;
+        color: #fff !important;
+    }
+
+    .non-active-color {
+        img {
+            opacity: 0;
+        }
+    }
+
+
+
+    .edit-stars .fa-regular {
+        color: #696969af;
+    }
+
+    .edit-stars .fa-solid {
+        color: #FFC633;
+    }
+
+
+
+
+
+    @media screen and (max-width: 500px) {
+        header .nav-item {
+            margin-bottom: 10px !important;
+            width: fit-content !important;
+        }
+
+        header .navbar-brand {
+            margin-right: 0 !important;
+        }
+
+        .navbar-container {
+            justify-content: start !important;
+            align-items: center !important;
+            gap: 16px !important;
+        }
+
+        .navbar-toggler-icon {
+            height: 100% !important;
+        }
+
+        .navbar-toggler {
+            padding: 0px !important;
+        }
+
+        .navbar .icons {
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        nav {
+            .search {
+                max-width: 577px !important;
+
+                .form-control {
+                    width: 100% !important;
+                }
+            }
+        }
+
+
+
+        #sec1 .left-sec1 {
+            padding-top: 40px !important;
+        }
+
+        #sec1 .left-sec1 {
+            h2 {
+
+                max-width: 315px !important;
+                margin-bottom: 20px !important;
+                @include textProperties($colorText: $color_2,
+                    $family: $family_1 , $weight: 700, $size: 36px, $lineHeight: 34px);
+            }
+
+            p {
+                font-size: 14px !important;
+                margin-bottom: 24px !important;
+            }
+
+            a {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 20px !important;
+
+            }
+        }
+
+    }
+
+    @media screen and (max-width: 995px) {
+        header .navbar-brand {
+            margin-right: 0 !important;
+        }
+
+        header .nav-item {
+            margin-bottom: 10px !important;
+            width: fit-content !important;
+        }
+
+        .navbar-container {
+            justify-content: start !important;
+            align-items: center !important;
+            gap: 16px !important;
+        }
+
+        .navbar-toggler-icon {
+            height: 100% !important;
+        }
+
+        .navbar-toggler {
+            padding: 0px !important;
+        }
+
+        .navbar .icons {
+            img {
+                width: 24px;
+                height: 24px;
 
             }
 
             button {
-                background-color: #000;
-                border: none;
-                border-radius: 62px;
-                padding: 13px 38px;
-                @include textProperties($colorText: #fff,
-                    $family: $family_1 , $weight: 500, $size: 16px, $lineHeight: 21px);
-
-
+                background-color: transparent;
 
             }
 
-        }
+            nav {
+                .search {
+                    max-width: 577px !important;
 
-        .checkout {
-            width: 100%;
-            background-color: #000;
-            border: none;
-            border-radius: 62px;
-            padding: 19px 0px;
-            @include textProperties($colorText: #FFFFFF,
-                $family: $family_1 , $weight: 500, $size: 16px, $lineHeight: 21px);
-
-
-        }
-
-
-    }
-}
-
-footer {
-    padding: 50px 0 81px;
-    background-color: #F0F0F0;
-
-    .top-footer {
-        padding-bottom: 50px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-
-        ul {
-            @extend .reset-ul;
-            display: flex;
-            flex-direction: column;
-            align-items: start;
-            gap: 26px;
-
-            li {
-
-                text-decoration: none;
-                @include textProperties($colorText: rgba(0, 0, 0, 0.6),
-                    $family: $family_1 , $weight: 400, $size: $size_8, $lineHeight: 18px);
-
-            }
-
-            .first-item {
-
-
-                letter-spacing: 3px;
-                @include textProperties($colorText: $color_2,
-                    $family: $family_1 , $weight: 500, $size: $size_8, $lineHeight: 18px);
-
-
-
-            }
-
-        }
-
-        .shop {
-            h2 {
-                margin-bottom: 25px;
-                @include textProperties($colorText: $color_2,
-                    $family: $family_1 , $weight: 700, $size: 33px, $lineHeight: 40px);
-            }
-
-            p {
-                max-width: 248px;
-                margin-right: auto;
-                margin-bottom: 35px;
-                @include textProperties($colorText: rgba(0, 0, 0, 0.6),
-                    $family: $family_1 , $weight: 400, $size: 14px, $lineHeight: 22px);
-            }
-
-            .social {
-                @extend .flex-row;
-                justify-content: start;
-                gap: 12px;
-
-                a {
-                    @extend .flex-row;
-                    text-decoration: none;
-                    width: 28px;
-                    height: 28px;
-                    border: 1px solid rgba(0, 0, 0, 0.2);
-                    border-radius: 50%;
-                    background-color: #fff;
-
-                    i {
-                        color: #000000;
-                        font-size: 12px;
+                    .form-control {
+                        width: 100% !important;
                     }
                 }
-
             }
         }
     }
-
-    .bottom-footer {
-        padding-top: 20px;
-
-        span {
-            @include textProperties($colorText: rgba(0, 0, 0, 0.6),
-                $family: $family_1 , $weight: 400, $size: 14px, $lineHeight: 18px);
-        }
-
-        .visa {
-            display: flex;
-            justify-content: end;
-
-        }
-    }
-}
-
-
-// js classes
-.hidden {
-    display: none;
-}
-
-.active-nav-link {
-    font-weight: 600;
-    border-bottom: 1px solid #000;
-}
-
-.non-active-circle {
-    img {
-        opacity: 0;
-    }
-}
-
-.active-size {
-    background-color: #000 !important;
-    color: #fff !important;
-}
-.non-active-color{
-    img {
-        opacity: 0;
-    }
-}
-
-
-@media screen and (max-width: 500px) {}
-
-@media screen and (max-width: 995px) {}
-
-
-
-@media screen and (max-width: 1420px) {}

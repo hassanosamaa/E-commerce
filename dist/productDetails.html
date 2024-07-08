@@ -68,8 +68,6 @@
     <![endif]-->
 
     <header>
-
-
     <div class="sign">
         <div class="container">
             <div class="row">
@@ -78,7 +76,7 @@
                         <h2>
                             Sign up and get 20% off to your first order. <span><a href="#">Sign Up Now</a></span>
                         </h2>
-                        <button id="close">
+                        <button id="close" class="d-none d-md-block">
                             <i class="fa-solid fa-xmark"></i>
                         </button>
                     </div>
@@ -89,17 +87,36 @@
 
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary ">
-        <div class="container">
+        <div class="container navbar-container  ">
+            <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <img src="assets/images/nav/barr.svg" alt="">
+                </span>
+            </button>
             <a class="navbar-brand" href="/">
                 <h1>
                     SHOP.CO
                 </h1>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+
+            <form class="d-lg-none d-flex flex-fill justify-content-end" role="search">
+                <div class="icons">
+                    
+                    <img id="se" src="assets/images/nav/searchh.svg" alt="search">
+                    
+                    <a href="card.html">
+                        <img src="assets/images/nav/shop.svg" alt="shop">
+                    </a>
+                    <button id="user">
+                        <img src="assets/images/nav/user.svg" alt="user">
+                    </button>
+
+                </div>
+            </form>
+
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
@@ -127,13 +144,13 @@
                     </li>
 
                 </ul>
-                <form class=" d-flex" role="search">
+                <form class=" d-lg-flex" role="search">
                     <div class="search">
                         <input class="form-control me-2" type="search" placeholder="Search for products..."
                             aria-label="Search">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
-                    <div class="icons">
+                    <div class="icons d-none d-lg-flex">
                         <a href="card.html">
                             <img src="assets/images/nav/shop.svg" alt="shop">
                         </a>
@@ -324,6 +341,16 @@
                                                     <div class="modal-body">
                                                         <input class="title-text" name="name" placeholder="Your Name.."></input>
                                                         <textarea class="des-text" name="rev" placeholder="Write a Review"></textarea>
+                                                      
+                                                        <div class="edit-stars">
+                                                            
+                                                            <i class=" fa-star fa-solid"></i>    
+                                                            <i class="fa-regular fa-star"></i>    
+                                                            <i class="fa-regular fa-star"></i>    
+                                                            <i class="fa-regular fa-star"></i>    
+                                                            <i class="fa-regular fa-star"></i>    
+
+                                                        </div>
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button  type="button" class="btn btn-secondary"
@@ -556,6 +583,16 @@
                                                 <div class="modal-body">
                                                     <input class="title-text2" name="name" placeholder="Your Name.."></input>
                                                     <textarea class="des-text2" name="rev" placeholder="Write a Review"></textarea>
+                                                    <div class="edit-stars">
+                                                            
+                                                        <i class=" fa-star fa-solid"></i>    
+                                                        <i class="fa-regular fa-star"></i>    
+                                                        <i class="fa-regular fa-star"></i>    
+                                                        <i class="fa-regular fa-star"></i>    
+                                                        <i class="fa-regular fa-star"></i>    
+
+                                                    </div>
+                                                 
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button  type="button" class="btn btn-secondary"
@@ -790,6 +827,16 @@
                                                 <div class="modal-body">
                                                     <input class="title-text3" name="name" placeholder="Your Name.."></input>
                                                     <textarea class="des-text3" name="rev" placeholder="Write a Review"></textarea>
+                                                    <div class="edit-stars">
+                                                            
+                                                        <i class=" fa-star fa-solid"></i>    
+                                                        <i class="fa-regular fa-star"></i>    
+                                                        <i class="fa-regular fa-star"></i>    
+                                                        <i class="fa-regular fa-star"></i>    
+                                                        <i class="fa-regular fa-star"></i>    
+
+                                                    </div>
+                                                  
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button  type="button" class="btn btn-secondary"

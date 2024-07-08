@@ -1,0 +1,441 @@
+{% extends "layout.html" %}
+{% block content %}
+{% import 'component/cardSec3.html' as card1 %}
+
+
+<section id="sec11">
+    <div class="container">
+        <div class="row sec11-row ">
+            <div class="col-12">
+                <div class="crumb">
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page"><a href="#">Casual</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-3 ">
+                <aside>
+                    <div class="filter">
+                        <h3>
+                            Filters
+                        </h3>
+                        <img src="assets/images/sec11/bar.svg" alt="">
+                    </div>
+
+
+                    <div class="accord-filter ">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        T-shirts
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse "
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p class="accor-description">Be the New you this spring summer 2018 with Men Shirts at Ravin. Long Sleeve or short sleeve striped, Checkered, Gingham, Basic and denim shirts for men.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Shorts
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p class="accor-description">Be the New you this spring summer 2018 with Men Shirts at Ravin. Long Sleeve or short sleeve striped, Checkered, Gingham, Basic and denim shirts for men.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        Shirts
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p class="accor-description">Be the New you this spring summer 2018 with Men Shirts at Ravin. Long Sleeve or short sleeve striped, Checkered, Gingham, Basic and denim shirts for men.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapsefour" aria-expanded="false"
+                                        aria-controls="collapsefour">
+                                        Hoodie
+                                    </button>
+                                </h2>
+                                <div id="collapsefour" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p class="accor-description">Be the New you this spring summer 2018 with Men Shirts at Ravin. Long Sleeve or short sleeve striped, Checkered, Gingham, Basic and denim shirts for men.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapsefive" aria-expanded="false"
+                                        aria-controls="collapsefive">
+                                        Jeans
+                                    </button>
+                                </h2>
+                                <div id="collapsefive" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p class="accor-description">Be the New you this spring summer 2018 with Men Shirts at Ravin. Long Sleeve or short sleeve striped, Checkered, Gingham, Basic and denim shirts for men.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="price">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne1" aria-expanded="true"
+                                        aria-controls="collapseOne1">
+                                        Price
+                                    </button>
+                                </h2>
+
+                                <div id="collapseOne1" class="accordion-collapse collapse show"
+                                    data-bs-parent="#accordionExample">
+
+                                    <div class="accordion-body">
+
+                                        <div slider id="slider-distance">
+                                            <div>
+                                                <div inverse-left style="width:70%;"></div>
+                                                <div inverse-right style="width:70%;"></div>
+                                                <div range style="left:20%;right:20%;"></div>
+                                                <span thumb style="left:20%;"></span>
+                                                <span thumb style="left:80%;"></span>
+                                                <div sign style="left:20%;">
+                                                    <span id="value">55</span>
+                                                </div>
+                                                <div sign style="left:80%;">
+                                                    <span id="value">200</span>
+                                                </div>
+                                            </div>
+                                            <input type="range" tabindex="0" value="20" max="100" min="0" step="1"
+                                                oninput="
+                                            this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
+                                            var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+                                            var children = this.parentNode.childNodes[1].childNodes;
+                                            children[1].style.width=value+'%';
+                                            children[5].style.left=value+'%';
+                                            children[7].style.left=value+'%';children[11].style.left=value+'%';
+                                            children[11].childNodes[1].innerHTML=this.value;" />
+
+                                            <input type="range" tabindex="0" value="80" max="100" min="0" step="1"
+                                                oninput="
+                                            this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
+                                            var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+                                            var children = this.parentNode.childNodes[1].childNodes;
+                                            children[3].style.width=(100-value)+'%';
+                                            children[5].style.right=(100-value)+'%';
+                                            children[9].style.left=value+'%';children[13].style.left=value+'%';
+                                            children[13].childNodes[1].innerHTML=this.value;" />
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="Colors">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne2" aria-expanded="true"
+                                        aria-controls="collapseOne2">
+                                        Colors
+                                    </button>
+                                </h2>
+                                <div id="collapseOne2" class="accordion-collapse collapse show"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+
+                                        <div class="colors-circle">
+                                            <span  class="non-active-color" style="background-color:#00C12B ;">
+                                                <img src="assets/images/sec8/truee.svg" alt="">
+                                            </span>
+                                            <span class="non-active-color"  style="background-color:#F50606 ;">
+                                                <img src="assets/images/sec8/truee.svg" alt="">
+                                            </span>
+                                            <span  class="non-active-color" style="background-color:#F5DD06 ;">
+                                                <img src="assets/images/sec8/truee.svg" alt="">
+                                            </span>
+                                            <span  class="non-active-color" style="background-color:#F57906 ;">
+                                                <img src="assets/images/sec8/truee.svg" alt="">
+                                            </span>
+                                            <span class="non-active-color"  style="background-color:#06CAF5 ;">
+                                                <img src="assets/images/sec8/truee.svg" alt="">
+                                            </span>
+                                            <span  class="" style="background-color:#063AF5 ;">
+                                                <img src="assets/images/sec8/truee.svg" alt="">
+                                            </span>
+                                            <span class="non-active-color"  style="background-color:#7D06F5 ;">
+                                                <img src="assets/images/sec8/truee.svg" alt="">
+                                            </span>
+                                            <span class="non-active-color"  style="background-color:#F506A4 ;">
+                                                <img src="assets/images/sec8/truee.svg" alt="">
+                                            </span>
+                                            <span  class="non-active-color" style="background-color:#FFFFFF ;">
+                                                <img  src="assets/images/sec8/trueblack.svg" alt="">
+                                            </span>
+                                            <span  class="non-active-color" style="background-color:#000000 ;">
+                                                <img src="assets/images/sec8/truee.svg" alt="">
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="Size">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne3" aria-expanded="true"
+                                        aria-controls="collapseOne3">
+                                        Size
+                                    </button>
+                                </h2>
+                                <div id="collapseOne3" class="accordion-collapse collapse show"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+
+                                        <div class="btns btns-size">
+                                            <span>XX-Small</span>
+                                            <span>X-Small</span>
+                                            <span>Small</span>
+                                            <span>Medium</span>
+                                            <span class="active-size">Large</span>
+                                            <span>X-Large</span>
+                                            <span>XX-Large</span>
+                                            <span>3X-Large</span>
+                                            <span>4X-Large</span>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="Dress">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne4" aria-expanded="true"
+                                        aria-controls="collapseOne4">
+                                        Dress Style
+                                    </button>
+                                </h2>
+                                <div id="collapseOne4" class="accordion-collapse collapse show"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+
+                                        <!-- body -->
+                                        <div class="accord-dress">
+                                            <div class="accordion" id="accordionExample">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapsed" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#collapseOne6"
+                                                            aria-expanded="false" aria-controls="collapseOne6">
+                                                            Casual
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseOne6" class="accordion-collapse collapse "
+                                                        data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <p class="accor-description">Be the New you this spring summer 2018 with Men Shirts at Ravin. Long Sleeve or short sleeve striped, Checkered, Gingham, Basic and denim shirts for men.</p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapsed" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo6"
+                                                            aria-expanded="false" aria-controls="collapseTwo6">
+                                                            Formal
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseTwo6" class="accordion-collapse collapse"
+                                                        data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <p class="accor-description">Be the New you this spring summer 2018 with Men Shirts at Ravin. Long Sleeve or short sleeve striped, Checkered, Gingham, Basic and denim shirts for men.</p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapsed" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#collapseThree6"
+                                                            aria-expanded="false" aria-controls="collapseThree6">
+                                                            Party
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseThree6" class="accordion-collapse collapse"
+                                                        data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <p class="accor-description">Be the New you this spring summer 2018 with Men Shirts at Ravin. Long Sleeve or short sleeve striped, Checkered, Gingham, Basic and denim shirts for men.</p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapsed" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#collapsefour6"
+                                                            aria-expanded="false" aria-controls="collapsefour6">
+                                                            Gym
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapsefour6" class="accordion-collapse collapse"
+                                                        data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <p class="accor-description">Be the New you this spring summer 2018 with Men Shirts at Ravin. Long Sleeve or short sleeve striped, Checkered, Gingham, Basic and denim shirts for men.</p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <button class="apply">Apply Filter</button>
+
+                </aside>
+            </div>
+            <div class="col-9  rightsec11">
+
+                <div class="row">
+                    <div class="col-12 text-start ">
+                        <div class="casual">
+                            <h2 class="title">
+                                Casual
+                            </h2>
+
+                            <div class="popular">
+                                <span class="show">Showing 1-10 of 100 Products</span>
+                                <span class="sort">Sort by:
+                                    <select id="cars" name="cars">
+                                        <option value="volvo">Most Popular</option>
+                                        <option value="saab">Saab</option>
+                                        <option value="fiat">Fiat</option>
+                                        <option value="audi">Audi</option>
+                                    </select>
+                                </span>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row products">
+                    {% for item in dataEn.sec11 %}
+
+                    <div class="col-4">
+                        <a href="productDetails.html">
+                            {{card1.card(item.imgPath,item.title,item.price,item.state,item.priceline,item.discoundprice,item.stars)}}
+                        </a>
+                    </div>
+
+                    {% endfor %}
+                </div>
+
+
+                <div class="row">
+                    <div class="col-12">
+                        <nav class="pagination-page" aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link " href="#"><span class="prev"><i class="fa-solid fa-arrow-left"></i></span>Previous</a></li>
+                                <ul class="items">
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">..</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">8</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">9</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">10</a></li>
+                                </ul>
+                                <li class="page-item"><a class="page-link" href="#">Next<span class="next"><i class="fa-solid fa-arrow-right"></i></span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+{% endblock content %}

@@ -1,0 +1,24 @@
+
+{% macro card (title,des,date,stars) %}
+<div class="card9  text-start">
+    <div class="pointstars d-flex justify-content-between align-items-center">
+        <div class="stars">
+
+            <span>
+                <span class="numStarss">{{stars}}</span>
+            </span>
+            
+        </div>
+        <img src="../../assets/images/sec9/points.svg" alt="">
+    </div>
+    <div class="title">
+        <h4>{{title}} 
+        </h4>
+       
+            <img src="assets/images/sec6/true.svg" alt="true">
+       
+    </div>
+    <p>{{des}}</p>
+    <h5>{{date}}</h5>
+</div>
+{% endmacro %}

@@ -12,14 +12,7 @@ import {nav} from "./nav";
 
 
 $(document).ready(() => {
-    nav();
-    sec11();
-    sec1();
-    sec3();
-    sec6();
-    sec8();
-    sec9();
-
+   
     
    
 

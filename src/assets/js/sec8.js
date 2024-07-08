@@ -8,8 +8,23 @@ export const sec8 = () => {
     const minBtn=document.querySelectorAll(".min");
     const maxBtn=document.querySelectorAll(".max");
     const numEle=document.querySelectorAll(".num");
+    const shirt=document.querySelectorAll(".it-shirt img");
+    const shirtDiv=document.querySelectorAll(".it-shirt");
+    const imgShirt=document.querySelector(".img-shirt img");
 
  
+
+    shirt.forEach((ele,index)=>{
+        ele.addEventListener('click',()=>{
+            shirt.forEach((ele,index)=>{
+                shirtDiv[index].classList.remove('active-shirt');
+            })
+            let src=ele.getAttribute('src');
+            imgShirt.setAttribute("src",src);
+            shirtDiv[index].classList.add('active-shirt')
+        })
+    })
+
     circleBtn.forEach((ele)=>{
       ele.addEventListener('click',(e)=>{
         circleBtn.forEach((e)=>{

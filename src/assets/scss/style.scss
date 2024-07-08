@@ -284,6 +284,7 @@ header {
 
     .imges {
         @extend .flex-row;
+        flex-wrap: wrap;
         gap: 106px;
     }
 }
@@ -2164,6 +2165,21 @@ footer {
             margin-bottom: 20px !important;
 
         }
+        .list-sec1 {
+            
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 55px;}
+    }
+
+    #sec2 {
+        .imges {
+            gap: 34px;
+        }
+    }
+
+    #sec3{
+        padding: 50px 0 ;
     }
 
 }

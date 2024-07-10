@@ -23,10 +23,10 @@
                 </div>
             </div>
         </div>
-        <div class="row  align-items-stretch">
-            <div class="col-6 ">
-                <div class="row  ">
-                    <div class="col-3">
+        <div class="row  align-items-stretch ">
+            <div class="col-lg-6 ">
+                <div class="row g-4  ">
+                    <div class="col-lg-3 order-3 order-lg-0">
                         <div class="shirts">
                             <div class="it-shirt active-shirt">
                                 <img src="assets/images/sec8/shirt-3.png" alt="">
@@ -39,14 +39,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-9   ">
+                    <div class="col-lg-9  order-0  order-lg-3">
                         <div class="img-shirt ">
                             <img src="assets/images/sec8/shirt.png" alt="t-shirt">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-6  ">
+            <div class="col-lg-6  ">
                 <div class="details">
                     <h2>One Life Graphic T-shirt</h2>
                     <div class="stars">
@@ -203,7 +203,7 @@
                         <div class="row cards sec-rev1">
                             {% for item in dataEn.sec6 %}
 
-                            <div class="col-6">
+                            <div class="col-lg-6">
                                 {{card9.card(item.title,item.des,item.date,item.stars)}}
                             </div>
 
@@ -407,11 +407,11 @@
             <div class="slick-2 ">
                 {% for item in dataEn.sec10 %}
 
-                <div class="col-3">
+              
                     <a href="productDetails.html">
                         {{card1.card(item.imgPath,item.title,item.price,item.state,item.priceline,item.discoundprice,item.stars)}}
                     </a>
-                </div>
+              
 
                 {% endfor %}
             </div>

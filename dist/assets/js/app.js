@@ -19124,6 +19124,7 @@
 	    // lazyLoad: 'ondemand',
 	    slidesToShow: 1,
 	    slidesToScroll: 1,
+	    dots: false,
 	    prevArrow: ' <i class="fa-solid fa-arrow-left     prev"></i>',
 	    nextArrow: ' <i class="fa-solid fa-arrow-right     next"></i>',
 	    // fade: true,
@@ -19197,8 +19198,7 @@
 	      settings: {
 	        slidesToShow: 2,
 	        slidesToScroll: 1,
-	        infinite: true,
-	        dots: true
+	        infinite: true
 	      }
 	    }, {
 	      breakpoint: 600,
@@ -19266,13 +19266,15 @@
 	      breakpoint: 600,
 	      settings: {
 	        slidesToShow: 1,
-	        slidesToScroll: 1
+	        slidesToScroll: 1,
+	        centerMode: false
 	      }
 	    }, {
 	      breakpoint: 480,
 	      settings: {
 	        slidesToShow: 1,
-	        slidesToScroll: 1
+	        slidesToScroll: 1,
+	        centerMode: false
 	      }
 	    } // You can unslick at a given breakpoint now by adding:
 	    // settings: "unslick"

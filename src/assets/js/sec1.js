@@ -12,6 +12,7 @@ export const sec1 = () => {
         // lazyLoad: 'ondemand',
         slidesToShow: 1,
         slidesToScroll: 1,
+        dots: false,
         
         prevArrow:' <i class="fa-solid fa-arrow-left     prev"></i>',
         nextArrow:' <i class="fa-solid fa-arrow-right     next"></i>',

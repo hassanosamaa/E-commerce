@@ -24,8 +24,7 @@ export const sec3 = () => {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
-                    infinite: true,
-                    dots: true
+                    infinite: true
                 }
             },
             {

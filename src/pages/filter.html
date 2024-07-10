@@ -16,7 +16,7 @@
                     </nav>
                 </div>
             </div>
-            <div id="aside" class=" col-3  ">
+            <div id="aside" class=" col-lg-3  ">
                 <aside>
 
                     <form>
@@ -407,7 +407,7 @@
 
                 </aside>
             </div>
-            <div class="col-9  rightsec11">
+            <div class="col-lg-9  rightsec11">
 
                 <div class="row">
                     <div class="col-12 text-start ">
@@ -433,13 +433,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="row products">
+                <div class="row products justify-content-center">
                     {% for item in dataEn.sec11 %}
 
-                    <div class="col-4 cardss">
-                        <a href="productDetails.html">
+                    <div class=" col-6 col-lg-4 cardss ">
+                      
                             {{card1.card(item.imgPath,item.title,item.price,item.state,item.priceline,item.discoundprice,item.stars)}}
-                        </a>
+                  
                     </div>
 
                     {% endfor %}
